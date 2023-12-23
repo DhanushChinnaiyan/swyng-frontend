@@ -1,0 +1,10 @@
+# netlify.toml
+
+[build]
+  command = "CI=false npm run build"  # The build command for your React project
+  publish = "build"  # The directory that should be deployed, usually "build" for React
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
